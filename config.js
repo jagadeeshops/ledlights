@@ -13,7 +13,7 @@ config.dev = {};
 config.dev.mongo = {};
 config.dev.mongo.username = "";
 config.dev.mongo.password = "";
-config.dev.mongo.host = "localhost";
+config.dev.mongo.host = "10.135.117.40";
 config.dev.mongo.db = "bizthrive";
 
 config.prod = {};

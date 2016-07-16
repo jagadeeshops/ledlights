@@ -1,37 +1,20 @@
-var counter = 1
 
 $( document ).ready(function() {
   
-  $("#submit").click( function(){
-    var searchTerm = $("#search").val()
-    if (searchTerm == "") {
-      alert("Please enter the product to search");
-    }
-    else {
-      var searchTerm = $("#search").val()
-      postReq(searchTerm, "#div-" + counter, counter)
-    }
-
+  $(".strategy").click( function(e){
+    var strategy = e.toElement.getAttribute("id")
+    postReq(strategy)
   });
 
 
 }); 
 
 
-function bindValues() {
-  $(".rawMaterial").click(function() {
-    var rawMaterial = $(this).text()
-    console.log(rawMaterial)
-    postReq(rawMaterial, "#div-" + counter, counter)
-  })
-}
 
-function postReq(searchTerm, div) {
-  var posting = $.post( "/search", { searchTerm: searchTerm } );
+function postReq(strategyValue) {
+  var posting = $.post( "/strategy", { strategy: strategyValue } );
   posting.done(function(data) {
-    $(div).html(data) 
-    bindValues()
-    counter = counter + 1;
+    console.log( "Strategy applied" );
   })
   posting.error(function() {
     alert( "Request failed" );

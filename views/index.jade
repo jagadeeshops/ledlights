@@ -11,29 +11,23 @@ block content
           span.icon-bar
         a.navbar-brand(href='#') #{title}
       #navbar.collapse.navbar-collapse
-        ul.nav.navbar-nav
-          li.active
-            a(href='/register') Register
+        //ul.nav.navbar-nav
+          //li.active
+            //a(href='/register') 
   br
   br
   br
   .container
     .row
-      .col-md-8
-        input#search.form-control(type='text', placeholder='Search here')
       .col-md-4
-        button.btn.btn-default#submit(type='submit') Search
+        .list-group
+          a.list-group-item#simple(class="strategy") simple
+          a.list-group-item#tooth(class="strategy") tooth
+          a.list-group-item#zigzag(class="strategy") zigzag
+          a.list-group-item#something(class="strategy") something
+          a.list-group-item#random(class="strategy") random
   br
-  .container
-    #rawMaterials
-      .col-md-3
-        #div-1
-      .col-md-3
-        #div-2
-      .col-md-3
-        #div-3
-      .col-md-3
-        #div-4
+
   script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
   script(src='js/bootstrap.min.js')
   script(src='jquery/home/index.js')
